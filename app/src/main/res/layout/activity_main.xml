@@ -30,7 +30,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="POWER"
-                    android:id="@+id/toggleButton"
+                    android:id="@+id/powerButton"
                     android:layout_weight="0.09"
                     android:textSize="40sp" />
 
@@ -38,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="UP"
-                    android:id="@+id/button9"
+                    android:id="@+id/upButton"
                     android:layout_gravity="bottom"
                     android:layout_marginLeft="250dp"
                     android:textSize="25sp" />
@@ -53,34 +53,38 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PREV"
-                    android:id="@+id/button4"
+                    android:id="@+id/prevButton"
                     android:layout_gravity="center"
                     android:layout_marginLeft="230dp"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textColor="#FFFFFFFF" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PAUSE"
-                    android:id="@+id/button10"
+                    android:id="@+id/pauseButton"
                     android:layout_gravity="center"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textColor="#FFFFFFFF" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PLAY"
-                    android:id="@+id/button11"
+                    android:id="@+id/playButton"
                     android:layout_gravity="center"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textColor="#FFFFFFFF" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NEXT"
-                    android:id="@+id/button12"
+                    android:id="@+id/nextButton"
                     android:layout_gravity="center"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textColor="#FFFFFFFF" />
             </LinearLayout>
 
             <LinearLayout
@@ -93,23 +97,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="EJECT"
-                    android:id="@+id/button13"
+                    android:id="@+id/ejectButton"
                     android:layout_gravity="bottom"
                     android:layout_marginLeft="270dp"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textColor="#FFFFFFFF" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DOWN"
-                    android:id="@+id/button14"
+                    android:id="@+id/downButton"
                     android:textSize="25sp" />
 
                 <TextView
                     android:layout_width="393dp"
                     android:layout_height="wrap_content"
                     android:text="CD Deck"
-                    android:id="@+id/textView2"
+                    android:id="@+id/cdTextView"
                     android:layout_gravity="bottom"
                     android:layout_marginRight="100dp"
                     android:textSize="40sp" />
@@ -139,7 +144,7 @@
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:text="FM"
-                    android:id="@+id/button"
+                    android:id="@+id/fmButton"
                     android:textColor="#000000"
                     android:textSize="36sp"
                     android:layout_weight="0.51" />
@@ -148,7 +153,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:text="This is the current station"
-                    android:id="@+id/textView"
+                    android:id="@+id/stationView"
                     android:layout_marginLeft="100dp"
                     android:layout_marginRight="100dp"
                     android:textColor="#000000"
@@ -166,16 +171,16 @@
                     android:layout_width="96dp"
                     android:layout_height="match_parent"
                     android:text="AM"
-                    android:id="@+id/button2"
+                    android:id="@+id/amButton"
                     android:textColor="#000000"
                     android:textSize="36sp" />
 
                 <SeekBar
                     android:layout_width="618dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/Tuner"
+                    android:id="@+id/tuner"
                     android:layout_marginLeft="100dp"
-                    android:max="108" />
+                    android:max="1170" />
             </LinearLayout>
 
             <LinearLayout
@@ -187,49 +192,54 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:id="@+id/preset1"
-                    android:textColor="#000000"
+                    android:id="@+id/preset1Button"
+                    android:textColor="#FFFFFFFF"
                     android:textSize="40sp" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2"
-                    android:id="@+id/button3"
-                    android:layout_marginLeft="100dp"
-                    android:textSize="40sp" />
+                    android:id="@+id/preset2Button"
+                    android:layout_marginLeft="75dp"
+                    android:textSize="40sp"
+                    android:textColor="#FFFFFFFF" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3"
-                    android:id="@+id/button5"
-                    android:layout_marginLeft="100dp"
-                    android:textSize="40sp" />
+                    android:id="@+id/preset3Button"
+                    android:layout_marginLeft="75dp"
+                    android:textSize="40sp"
+                    android:textColor="#FFFFFFFF" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="4"
-                    android:id="@+id/button6"
-                    android:layout_marginLeft="100dp"
-                    android:textSize="40sp" />
+                    android:id="@+id/preset4Button"
+                    android:layout_marginLeft="75dp"
+                    android:textSize="40sp"
+                    android:textColor="#FFFFFFFF" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="5"
-                    android:id="@+id/button7"
-                    android:layout_marginLeft="100dp"
-                    android:textSize="40sp" />
+                    android:id="@+id/preset5Button"
+                    android:layout_marginLeft="75dp"
+                    android:textSize="40sp"
+                    android:textColor="#FFFFFFFF" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="6"
-                    android:id="@+id/button8"
-                    android:layout_marginLeft="100dp"
-                    android:textSize="40sp" />
+                    android:id="@+id/preset6Button"
+                    android:layout_marginLeft="50dp"
+                    android:textSize="40sp"
+                    android:textColor="#FFFFFFFF" />
             </LinearLayout>
         </TableLayout>
     </LinearLayout>
