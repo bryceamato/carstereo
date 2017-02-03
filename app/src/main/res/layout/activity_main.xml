@@ -140,15 +140,6 @@
                 android:layout_height="100dp"
                 android:weightSum="1">
 
-                <Button
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:text="FM"
-                    android:id="@+id/fmButton"
-                    android:textColor="#000000"
-                    android:textSize="36sp"
-                    android:layout_weight="0.51" />
-
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
@@ -167,20 +158,21 @@
                 android:layout_height="100dp"
                 android:weightSum="1">
 
-                <Button
-                    android:layout_width="96dp"
+                <ToggleButton
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="AM"
-                    android:id="@+id/amButton"
-                    android:textColor="#000000"
-                    android:textSize="36sp" />
+                    android:text="AM/FM"
+                    android:id="@+id/amfmButton"
+                    android:layout_weight="0.12"
+                    android:checked="false"
+                    android:textSize="48sp" />
 
                 <SeekBar
                     android:layout_width="618dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/tuner"
                     android:layout_marginLeft="100dp"
-                    android:max="1170" />
+                    android:max="100" />
             </LinearLayout>
 
             <LinearLayout
