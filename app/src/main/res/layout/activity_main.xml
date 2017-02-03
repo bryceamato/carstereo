@@ -165,7 +165,9 @@
                     android:id="@+id/amfmButton"
                     android:layout_weight="0.12"
                     android:checked="false"
-                    android:textSize="48sp" />
+                    android:textSize="48sp"
+                    android:textOff="FM"
+                    android:textOn="AM" />
 
                 <SeekBar
                     android:layout_width="618dp"

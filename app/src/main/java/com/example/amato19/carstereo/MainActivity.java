@@ -20,6 +20,16 @@ public class MainActivity extends AppCompatActivity {
     private SeekBar tuner;
     private  double step;
     private double min;
+    private Button p1;
+    private Button p2;
+    private Button p3;
+    private Button p4;
+    private Button p5;
+    private Button p6;
+
+    private double[] fmPresets = {90.9, 92.9, 94.9, 96.9, 98.9, 100.9};
+    private double[] amPresets = {550, 600, 650, 700, 750, 800};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
         volDown = (Button)findViewById(R.id.downButton);
         stationName = (TextView)findViewById(R.id.stationView);
         tuner = (SeekBar)findViewById(R.id.tuner);
+        p1 = (Button)findViewById(R.id.preset1Button);
+        p2 = (Button)findViewById(R.id.preset2Button);
+        p3 = (Button)findViewById(R.id.preset3Button);
+        p4 = (Button)findViewById(R.id.preset4Button);
+        p5 = (Button)findViewById(R.id.preset5Button);
+        p6 = (Button)findViewById(R.id.preset6Button);
 
         power.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -44,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
                     volUp.setTextColor(0xFFFFFFFF);
                     volDown.setTextColor(0xFFFFFFFF);
                     stationName.setTextColor(0xFFFFFFFF);
+                    p1.setTextColor(0xFFFFFFFF);
+                    p2.setTextColor(0xFFFFFFFF);
+                    p3.setTextColor(0xFFFFFFFF);
+                    p4.setTextColor(0xFFFFFFFF);
+                    p5.setTextColor(0xFFFFFFFF);
+                    p6.setTextColor(0xFFFFFFFF);
                 } else
                 {
                     power.setTextColor(0x00000000);
@@ -52,9 +74,117 @@ public class MainActivity extends AppCompatActivity {
                     volUp.setTextColor(0x00000000);
                     volDown.setTextColor(0x00000000);
                     stationName.setTextColor(0x00000000);
+                    p1.setTextColor(0x00000000);
+                    p2.setTextColor(0x00000000);
+                    p3.setTextColor(0x00000000);
+                    p4.setTextColor(0x00000000);
+                    p5.setTextColor(0x00000000);
+                    p6.setTextColor(0x00000000);
                 }
             }
         });
+
+        p1.setOnLongClickListener(new View.OnLongClickListener()
+        {
+            public boolean onLongClick(View v)
+            {
+                if(amfm.isChecked())
+                {
+                    //stationName.setText("" + amPresets[1]);
+                    String preset = "" + stationName.getText();
+                    amPresets[1] = Integer.parseInt(preset);
+                }else
+                {
+                    //stationName.setText("" + fmPresets[1]);
+                    String preset = "" + stationName.getText();
+                    fmPresets[1] = Integer.parseInt(preset);
+                }
+                return false;
+            }
+        });
+
+        p1.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                if(amfm.isChecked())
+                {
+                    stationName.setText("" + amPresets[1]);
+                }else
+                {
+                    stationName.setText("" + fmPresets[1]);
+                }
+
+            }
+        });
+        p2.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                if(amfm.isChecked())
+                {
+                    stationName.setText("" + amPresets[2]);
+                }else
+                {
+                    stationName.setText("" + fmPresets[2]);
+                }
+            }
+        });
+        p3.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                if(amfm.isChecked())
+                {
+                    stationName.setText("" + amPresets[3]);
+                }else
+                {
+                    stationName.setText("" + fmPresets[3]);
+                }
+            }
+        });
+        p4.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                if(amfm.isChecked())
+                {
+                    stationName.setText("" + amPresets[4]);
+                }else
+                {
+                    stationName.setText("" + fmPresets[4]);
+                }
+            }
+        });
+        p5.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                if(amfm.isChecked())
+                {
+                    stationName.setText("" + amPresets[5]);
+                }else
+                {
+                    stationName.setText("" + fmPresets[5]);
+                }
+            }
+        });
+        p6.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                if(amfm.isChecked())
+                {
+                    stationName.setText("" + amPresets[6]);
+                }else
+                {
+                    stationName.setText("" + fmPresets[6]);
+                }
+            }
+        });
+
+
+
 
 
         amfm.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -64,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
                     amfm.setText("AM");
                     step = 11.7;
                     min = 530;
+
                 } else
                 {
                     amfm.setText("FM");
@@ -89,8 +220,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onProgressChanged(SeekBar seekBar, int progress,
                                                   boolean fromUser)
                     {
+
                         double value = min + (progress * step);
-                        stationName.setText("" + value);
+                        stationName.setText("" + (new java.text.DecimalFormat("000.0").format( value )));
                     }
                 }
         );
