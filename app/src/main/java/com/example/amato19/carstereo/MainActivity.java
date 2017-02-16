@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button volDown;
     private TextView stationName;
     private SeekBar tuner;
-    private  double step;
+    private double step;
     private double min;
     private Button p1;
     private Button p2;
@@ -88,20 +88,112 @@ public class MainActivity extends AppCompatActivity {
         {
             public boolean onLongClick(View v)
             {
-                if(amfm.isChecked())
-                {
-                    //stationName.setText("" + amPresets[1]);
-                    String preset = "" + stationName.getText();
-                    amPresets[1] = Integer.parseInt(preset);
-                }else
-                {
-                    //stationName.setText("" + fmPresets[1]);
-                    String preset = "" + stationName.getText();
-                    fmPresets[1] = Integer.parseInt(preset);
+                    if (amfm.isChecked()) {
+
+                        String preset = "" + stationName.getText();
+                        int newpreset = Integer.parseInt(preset);
+                        amPresets[1] = newpreset;
+                    } else {
+
+                        String preset = "" + stationName.getText();
+                        int newpreset = Integer.parseInt(preset);
+                        fmPresets[1] = newpreset;
+                    }
+                    return true;
                 }
-                return false;
+        });
+        p2.setOnLongClickListener(new View.OnLongClickListener()
+        {
+            public boolean onLongClick(View v)
+            {
+                if (amfm.isChecked()) {
+
+                    String preset = "" + stationName.getText();
+                    int newpreset = Integer.parseInt(preset);
+                    amPresets[2] = newpreset;
+                } else {
+
+                    String preset = "" + stationName.getText();
+                    int newpreset = Integer.parseInt(preset);
+                    fmPresets[2] = newpreset;
+                }
+                return true;
             }
         });
+        p3.setOnLongClickListener(new View.OnLongClickListener()
+        {
+            public boolean onLongClick(View v)
+            {
+                if (amfm.isChecked()) {
+
+                    String preset = "" + stationName.getText();
+                    int newpreset = Integer.parseInt(preset);
+                    amPresets[3] = newpreset;
+                } else {
+
+                    String preset = "" + stationName.getText();
+                    int newpreset = Integer.parseInt(preset);
+                    fmPresets[3] = newpreset;
+                }
+                return true;
+            }
+        });
+        p4.setOnLongClickListener(new View.OnLongClickListener()
+        {
+            public boolean onLongClick(View v)
+            {
+                if (amfm.isChecked()) {
+
+                    String preset = "" + stationName.getText();
+                    int newpreset = Integer.parseInt(preset);
+                    amPresets[4] = newpreset;
+                } else {
+
+                    String preset = "" + stationName.getText();
+                    int newpreset = Integer.parseInt(preset);
+                    fmPresets[4] = newpreset;
+                }
+                return true;
+            }
+        });
+        p5.setOnLongClickListener(new View.OnLongClickListener()
+        {
+            public boolean onLongClick(View v)
+            {
+                if (amfm.isChecked()) {
+
+                    String preset = "" + stationName.getText();
+                    int newpreset = Integer.parseInt(preset);
+                    amPresets[5] = newpreset;
+                } else {
+
+                    String preset = "" + stationName.getText();
+                    int newpreset = Integer.parseInt(preset);
+                    fmPresets[5] = newpreset;
+                }
+                return true;
+            }
+        });
+        p6.setOnLongClickListener(new View.OnLongClickListener()
+        {
+            public boolean onLongClick(View v)
+            {
+                if (amfm.isChecked()) {
+
+                    String preset = "" + stationName.getText();
+                    int newpreset = Integer.parseInt(preset);
+                    amPresets[6] = newpreset;
+                } else {
+
+                    String preset = "" + stationName.getText();
+                    int newpreset = Integer.parseInt(preset);
+                    fmPresets[6] = newpreset;
+                }
+                return true;
+            }
+        });
+
+
 
         p1.setOnClickListener(new View.OnClickListener()
         {
