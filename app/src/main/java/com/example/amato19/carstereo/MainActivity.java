@@ -91,12 +91,12 @@ public class MainActivity extends AppCompatActivity {
                     if (amfm.isChecked()) {
 
                         String preset = "" + stationName.getText();
-                        int newpreset = Integer.parseInt(preset);
+                        double newpreset = Double.parseDouble(preset);
                         amPresets[1] = newpreset;
                     } else {
 
                         String preset = "" + stationName.getText();
-                        int newpreset = Integer.parseInt(preset);
+                        double newpreset = Double.parseDouble(preset);
                         fmPresets[1] = newpreset;
                     }
                     return true;
@@ -109,12 +109,12 @@ public class MainActivity extends AppCompatActivity {
                 if (amfm.isChecked()) {
 
                     String preset = "" + stationName.getText();
-                    int newpreset = Integer.parseInt(preset);
+                    double newpreset = Double.parseDouble(preset);
                     amPresets[2] = newpreset;
                 } else {
 
                     String preset = "" + stationName.getText();
-                    int newpreset = Integer.parseInt(preset);
+                    double newpreset = Double.parseDouble(preset);
                     fmPresets[2] = newpreset;
                 }
                 return true;
@@ -127,12 +127,12 @@ public class MainActivity extends AppCompatActivity {
                 if (amfm.isChecked()) {
 
                     String preset = "" + stationName.getText();
-                    int newpreset = Integer.parseInt(preset);
+                    double newpreset = Double.parseDouble(preset);
                     amPresets[3] = newpreset;
                 } else {
 
                     String preset = "" + stationName.getText();
-                    int newpreset = Integer.parseInt(preset);
+                    double newpreset = Double.parseDouble(preset);
                     fmPresets[3] = newpreset;
                 }
                 return true;
@@ -145,12 +145,12 @@ public class MainActivity extends AppCompatActivity {
                 if (amfm.isChecked()) {
 
                     String preset = "" + stationName.getText();
-                    int newpreset = Integer.parseInt(preset);
+                    double newpreset = Double.parseDouble(preset);
                     amPresets[4] = newpreset;
                 } else {
 
                     String preset = "" + stationName.getText();
-                    int newpreset = Integer.parseInt(preset);
+                    double newpreset = Double.parseDouble(preset);
                     fmPresets[4] = newpreset;
                 }
                 return true;
@@ -163,12 +163,12 @@ public class MainActivity extends AppCompatActivity {
                 if (amfm.isChecked()) {
 
                     String preset = "" + stationName.getText();
-                    int newpreset = Integer.parseInt(preset);
+                    double newpreset = Double.parseDouble(preset);
                     amPresets[5] = newpreset;
                 } else {
 
                     String preset = "" + stationName.getText();
-                    int newpreset = Integer.parseInt(preset);
+                    double newpreset = Double.parseDouble(preset);
                     fmPresets[5] = newpreset;
                 }
                 return true;
@@ -181,12 +181,12 @@ public class MainActivity extends AppCompatActivity {
                 if (amfm.isChecked()) {
 
                     String preset = "" + stationName.getText();
-                    int newpreset = Integer.parseInt(preset);
+                    double newpreset = Double.parseDouble(preset);
                     amPresets[6] = newpreset;
                 } else {
 
                     String preset = "" + stationName.getText();
-                    int newpreset = Integer.parseInt(preset);
+                    double newpreset = Double.parseDouble(preset);
                     fmPresets[6] = newpreset;
                 }
                 return true;
